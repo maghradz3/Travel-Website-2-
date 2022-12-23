@@ -21,12 +21,13 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 65px 536px 163px 98px;
+        padding: 50px 536px 163px 98px;
 
 }
 
-header img{
-            margin-right: 341px;
+.fa-plane-departure{
+       font-size: 20px;
+            margin-right: 350px;
 }
 
 
@@ -48,11 +49,99 @@ nav ul li {
 
 nav ul li:hover{
     box-shadow: 0px 0px 8px 2px rebeccapurple;
-    color: aqua;
+    color: aqua;}
    
    
-        
+/* ----search bar ----- */
+
+.search-content{
+    
+    width: 45%;
+    height: 20px;
+    margin-top: -120px;
+    margin-left: 55%;
+    margin-bottom: 30px;
+    padding: 50px;
+    box-shadow: 0 0  3em rgba(0,0,0,0.15);
+    position: relative;
+    
+    
+
 }
+
+.search-bar{
+    --size:60px;
+    
+    display: flex;
+    border-radius: 50px;
+    height: var(--size);
+    width: var(--size);
+    position: relative;
+    transition: 1100ms cubic-bezier(0.68,-0.55, 0.37, 1.49);
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+}
+
+.search-input{
+    flex-grow: 1;
+    font-size: 1.5rem;
+    padding: 3px;
+    border:0;
+    background-image: linear-gradient(rgba(1, 12, 131, 0.6),rgba(13, 90, 212, 0.6));
+    color:#ffffff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity:0;
+    cursor: pointer;
+}
+
+.search-bar-submit{
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(rgba(1, 12, 131, 0.6),rgba(13, 90, 212, 0.6));
+    color: #000000;
+    width: calc( var(--size) - 8px);
+    height: calc( var(--size) - 8px);
+    margin-left: auto;
+}
+
+.search-input:focus{
+    outline: 0;
+}
+
+.search-bar:focus-within{
+    width: 100%;
+    /* background:pink;
+    color: #ffffff; */
+}
+
+
+.search-input:focus-within{
+    opacity: 1;
+    cursor: initial;
+    color: rgb(255, 255, 255);
+    width: calc(100% - var(--size));
+}
+
+
+.search-bar-submit:focus{
+    outline: 0;
+    box-shadow: 0 0 4px  rgb(1, 1, 1);
+   
+}
+
+
+
+
+
+   /*----Main text-------  */
+
 
 .main-text{ width: 820px;
             height: 140px;
@@ -163,12 +252,19 @@ nav ul li:hover{
 .content-2{
     width: 100%;
     /* border: 2px solid rebeccapurple; */
+    background-image: linear-gradient(rgba(14, 0, 70, 0.6),rgba(11, 120, 236, 0.6));
     padding-top: 150px;
     padding-bottom: 60px;
     font-size: 40px;
-    color: #545466;
+    color: #646464;
     padding-right: 1%;
     padding-left: 18%;
+    
+
+}
+
+.content-2 h2{
+    color: azure;
 
 }
 
@@ -338,6 +434,7 @@ nav ul li:hover{
     height: 60%;
     transition: 0.4s;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .travel-gallery img:hover{
